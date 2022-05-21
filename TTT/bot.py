@@ -80,10 +80,10 @@ async def place(ctx, pos: int):
         mark = ""
         if turn == ctx.author:
             if turn == player1:
-                mark = ":white_chech_mark:"
+                mark = ":white_check_mark:"
             elif turn == player2:
                 mark = ":x:"
-            if 0 < pos < 10 and board[pos - 1] == ":white_large_square:" :
+            if 0 < pos < 10 and board[pos - 1] == ":purple_square:" :
                 board[pos - 1] = mark
                 count += 1
 
@@ -100,7 +100,7 @@ async def place(ctx, pos: int):
                 check(winningConditions, mark)
                 print(count)
                 if gameOver == True:
-                    await ctx.send(mark + " wins!")
+                    await ctx.send( mark + " wins!")
                 elif count >= 9:
                     gameOver = True
                     await ctx.send("It's a tie!")
@@ -138,4 +138,4 @@ async def palce(ctx,error):
         await ctx.send("Please enter an integer")
 
 
-client.run('OTc3NDM5MDk1MzgwOTIyMzg4.GFIZhf.ZJffev3HqB-wKrptZDBWKfLaR3TjQM2ENnvBso')
+client.run(os.getenv('TOKEN'))
