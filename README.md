@@ -11,7 +11,7 @@ We referred the standard documentation for Python from [Python Docs](https://doc
 ## The Challenges
 We faced serious challenges in enhacing the interactivity of the bot. The way the bot interacted with the user had to be redefined again, and that was challenging. But we managed to push through it with full might.
 
-We managed to design a help page and added a feature to look at github profiles of the users through a command `l.github`. These took a us a great deal of effort to figure out, but it paid off in the end. The games were designed with a great deal of care, keeping in mind the users playing it. They do not have numerous prerequisites but present a the users with a fun-filled exoerience nonetheless.
+We managed to design a help page and added a feature to look at github profiles of the users through a command `l.github`. These took a us a great deal of effort to figure out, but it paid off in the end. The games were designed with a great deal of care, keeping in mind the users playing it. They do not have numerous prerequisites but present a the users with a fun-filled experience nonetheless.
 
 ## The Vision: What's up next for Lord Lezush?
 We are envisioning a series of feature releases for out bot. The features will focus on making the bot more one-stop solution in community building and will could be able to change the way communities interact within themselves.
