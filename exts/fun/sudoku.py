@@ -11,7 +11,7 @@ class Sdk(commands.Cog, name="Sudoku"):
     @commands.command(name="sudoku", aliases=["sdk"])
     async def sdk(self, ctx: commands.Context, width: int = 3 , height: int = 3 , difficulty: float = 0.2):
         """
-        Generates a sudoku.
+        Generates a sudoku puzzle.
         """
         puzzle = Sudoku(width , height, difficulty=difficulty)
         await ctx.reply(f"**{width}x{height} SUDOKU**\n*Difficulty: {difficulty}*\n```\n{puzzle._Sudoku__format_board_ascii()}\n```", mention_author=False)
@@ -19,7 +19,7 @@ class Sdk(commands.Cog, name="Sudoku"):
     @commands.command(name="sudokusolve" , aliases=["sdkslv", "sdksolve"])
     async def stdslv(self, ctx: commands.Context):
         """
-        Solves the generated suduko in the message reference.
+        Solves the generated sudoku puzzle in the message reference.
         """
         if ctx.message.reference is None:
             await ctx.reply(

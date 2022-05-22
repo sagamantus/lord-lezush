@@ -10,7 +10,7 @@ class Ping(commands.Cog, name="Ping"):
     @commands.command(name="ping")
     async def ping(self, ctx: commands.Context):
         """
-        Bot's latency.
+        Get bot's latency.
         """
 
         if ctx.author == self.client.user:

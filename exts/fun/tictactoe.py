@@ -117,7 +117,7 @@ class TTT(commands.Cog, name="Tic-Tac-Toe"):
     @commands.command(name="tictactoe", aliases=["ttt"])
     async def tictactoe(self, ctx: commands.Context):
         """
-        Start a game tic-tac-toe.
+        Start a game of tic-tac-toe between two members.
         """
         await ctx.send("Tic Tac Toe: X goes first", view=TicTacToe())
 

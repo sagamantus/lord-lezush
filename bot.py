@@ -18,6 +18,6 @@ for directory in os.listdir('exts'):
 @client.event
 async def on_ready():
     print("Bot is Happy and Ready!")
-    await client.change_presence(activity=discord.Activity(name="Hello World!", type=3))
+    await client.change_presence(activity=discord.Activity(name="with Fire!", type=1))
 
 client.run(os.getenv("TOKEN"))
