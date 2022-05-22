@@ -37,7 +37,7 @@ class HelpCommand(commands.HelpCommand):
             data += "**"+cog.qualified_name+"**\n"
             if cog.description:
                 data += "*"+cog.description+"*\n"
-            for command in sorted(cog.get_commands()):
+            for command in sorted(cog.get_commands(), key=lambda x: x.name):
                 data += "`"+config.PREFIX[0]+command.name+"`\n"
                 data += "*"+command.help+"*\n"
             data += "\n"
@@ -128,7 +128,7 @@ class HelpCommand(commands.HelpCommand):
         embed = discord.Embed(colour=config.EMBED_COLOR, timestamp=self.context.message.created_at)
         embed.set_author(name=f"Command: {command}", icon_url=self.context.bot.user.avatar)
         embed.add_field(name="Description", value=command.help, inline=False)
-        embed.add_field(name="Usage", value=self.get_command_signature(command), inline=False)
+        embed.add_field(name="Usage", value=f"`{self.get_command_signature(command)}`", inline=False)
         if command.aliases:
             embed.add_field(name="Aliases", value=", ".join(command.aliases), inline=False)
 
@@ -140,7 +140,7 @@ class HelpCommand(commands.HelpCommand):
         data += "**"+cog.qualified_name+"**\n"
         if cog.description:
             data += "*"+cog.description+"*\n"
-        for command in sorted(cog.get_commands()):
+        for command in sorted(cog.get_commands(), key= lambda x: x.name):
             data += "`"+config.PREFIX[0]+command.name+"`\n"
             data += "*"+command.help+"*\n"
         data += "\n"

@@ -8,7 +8,7 @@ class Ping(commands.Cog, name="Ping"):
         self.client = client
 
     @commands.command(name="ping")
-    async def ping(self, ctx):
+    async def ping(self, ctx: commands.Context):
         """
         Bot's latency.
         """
