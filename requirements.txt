@@ -9,6 +9,7 @@ frozenlist==1.3.0
 idna==3.3
 multidict==6.0.2
 nextcord==2.0.0a10
+py-sudoku==1.0.2
 pycodestyle==2.8.0
 requests==2.27.1
 toml==0.10.2
