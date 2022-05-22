@@ -1,7 +1,8 @@
 import nextcord as discord
 from nextcord.ext import commands
+from utils import config
 
-class Ping(commands.Cog, name="Info"):
+class Ping(commands.Cog, name="Ping"):
 
     def __init__(self, client):
         self.client = client
@@ -18,7 +19,7 @@ class Ping(commands.Cog, name="Info"):
         await ctx.reply(
             embed=discord.Embed(
                 description=f"Pong: `{round(self.client.latency*1000)} ms`",
-                color=0x2F3136,
+                color=config.EMBED_COLOR,
                 timestamp=ctx.message.created_at
             ), 
             mention_author=False

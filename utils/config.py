@@ -1,0 +1,2 @@
+PREFIX = ["l.","L."]
+EMBED_COLOR = 0x2F3136
